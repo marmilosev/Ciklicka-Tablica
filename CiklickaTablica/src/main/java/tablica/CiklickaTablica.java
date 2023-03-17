@@ -31,24 +31,37 @@ public class CiklickaTablica {
                 matrica[donjiRed][k] = n++;
             }
             donjiRed--;
-
+            
+            if(n >= suma){
+                break;
+            }
+            
             //lijeviStupac
             for (int k = donjiRed; k >= gornjiRed; k--) {
                 matrica[k][lijeviStupac] = n++;
             }
             lijeviStupac++;
+            
+            if(n >= suma){
+                break;
+            }
 
             //gornjiRed
             for (int k = lijeviStupac; k <= desniStupac; k++) {
                 matrica[gornjiRed][k] = n++;
             }
             gornjiRed++;
+            
+            if(n >= suma){
+                break;
+            }
 
             //desniStupac
             for (int k = gornjiRed; k <= donjiRed; k++) {
                 matrica[k][desniStupac] = n++;
             }
             desniStupac--;
+           
         }
         //ispis matrice
         for (int k = 0; k < i; k++) {
